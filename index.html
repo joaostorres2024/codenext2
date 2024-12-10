@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <title>CodeNext - Em Construção</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </head>
-  <body>
-    <canvas id="bubbles"></canvas>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>CodeNext - Site em Construção</title>
+</head>
+<body>
+  <main>
     <header>
-      <div class="logo">CodeNext</div>
-      <div class="social-links">
-        <a href="#" onclick="clicou()" class="social-link"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/codenext.oficial/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-        <a href="#" onclick="clicou()" class="social-link"><i class="fab fa-linkedin"></i></a>
+      <div class="header-container">
+        <nav>
+          <ul>
+            <a href="index.html"><li>HOME</li></a>
+          </ul>
+          <ul>
+            <a href="https://www.instagram.com/codenext.oficial/" target="_blank"><li><img class="icons" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA5RJREFUWEfFl1moV1UUxn9fA6RhgYIPklFJFEUOkZYWNDyEjUTlEIX4ZFkEIgVlaoWRUYk0QfXSgzQXUVlCQklQmkYPlfikD1IRUdFMRvm1l+1j5557pr9XuBsOHM5ae+1vf2s8YpSXRvl8egGwPQmYAhzZE/A/wB5JX3fpNwKwfQrwBHA+cHyXoQb5r8AnwL2SPq7TqQVg+2ZgHXDsIR5c3WZghaSHqoJhAGwvAZ7Jir8nEI8Au4DvBgQTtm8CbgDG5L1LJT1dtjMEgO2TgS+BscBXwFxJOwc8eIi67ROAj4ATgX3AGZL2FEoHAdiO9w+BC5LPgrLZksJ/Ay/bE9NhdwP7gQfzhXYDR6dg3pAALKoDcHqmOmTPSwr6Dmmly9yfDl+dN6+S9IDtF4GFwC/AeEmRKf+noe2LgA/ypjslPdp0uu1ZQOifndn6LPZK+jT22L4vIj/vXy1pje3bgCfzt2mSPq8CuA54LSvMl/TqsFC2IysC2C0N4J4C7gCOi6hPz1+J/oclfW97XvL/K3nfNZLerAIoK8yTVIA5sMf2MUDc8MwOv3wBzJL0Z1mvAuCg/XIQdgF4HLg9G30rbgYUGRKgIuiuyPL1kpYPCmA+8HKdC/wf9VHVAvBGSVfVsWD7HeBy4O9UyMaVWbBda78XA7bjZhvzoZGe2xoAnAdszbJLJW0u9Pq4oI2BKMsFpXGz3xoAjE9u+iHL1kqKQCxiqJOBNgBl/0+Q9GMPAI9JWjYIgMYgtL0YeC4bmyOpoHkIDtuzgaLrLZK04XC5YAYQxSZWWxC+m9rvZVnvLEnRV3q7oI2BCNZIvSuzvYj2qPGRhkcBpwH35AwIlTdSpbt20DTsqgNR3bbnw+pCoPgWrTsK0ZBA7ZMFgfj1ujpQojHa9HogZoa6FXPEckl/VIW2FwAv5e9XS3o73st1YE7u2/F92OBQofPc1HwuTPFwDhBdLeJji6QdTdTYXplmyjVZPqWYCcoAxgE/AUe0BVob920y2+8DF0dFlRTuPLCqE1FRSkM2VVI0lhEv23OBTdnQuhQf0TFrAUzPdAawvWk8u76N1j7IbF8SUxAQo/23adg5tRygdUPpXcDakvFIv/dKna/PuaEzLWbK/BR7bpT0QtlA01geAALI4VoxXUd2PFs12PZjEgETc93MEfwf/JwYiM55a3kS7mSgitL2ZOCkAX/Ndkv6povCXv+GXUZGIh91AP8CWN6GMFP8bKUAAAAASUVORK5CYII=" alt=""></li></a>
+            <a href="https://www.linkedin.com/in/code-next-017173341/"><li><img class="icons" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAdRJREFUWEftlztLXUEUhb+FEU0iKliksJIIQfwFQSKaVoKN2lnEIGnERkvBVxuxUFvx0STEIpWNSBIU/0FMExGSLoWN+CzczoR7ZO5ROPd47s1FuAOnmdf+Zu3ZizmizE1ljk8F4JYCZtYCLAFdwOMipegM2AZGJR2Ge94FsAt0FClwfJtdSa+SADxtbYkATiTVJQFYMOEjMAf8AWaB4axgkvJUvysFIUCrpAMf1Mz83B9AWxaINAAXwBNJV1FAM/sC9P4vAB9nRJKvCK+AvxdHWSsjjQLRQTeB38AboDnL6f3a+wBkjZm3Pi3AZ2A/2GHCVUMV8N0Z1begfwj4C8wA50A78B54EadPC9AvaSO4hH7zGqfktKumqaD/HbAs6aaCcndmHejLq/uUZTggyavwr5nZJVDtT+qCTSblxswagV9AUzS3VAo8A8aBBvfNS/oZQH8AxooFECkQT8Ey8DYX5Kuk1wHAILB2X4CCUmBme8DLXJBjSfUBwIBzz08VgIoCD1YB73bedqO2BTwCVoGVoH8xZ7++6xToCcb82/LGtAoxolI+yU4lPc2z5ridxmo6yW3Tju9I6kwCeO68e8FJ313Ex2nhz/K0R8o6v/JrVnYFrgHhIh0wIOTuPgAAAABJRU5ErkJggg==" alt=""></li></a>
+          </ul>
+        </nav>
       </div>
     </header>
-    <main>
-      <div class="animated-text">CodeNext</div>
-      <p class="construction-text">Esta página está em construção e estará disponível em breve!</p>
-    </main>
-    <script>
-        function clicou(){
-            alert("Ainda não disponível")
-        }
-    </script>
-  </body>
+    <div class="main-container">
+      <img class="logo" src="CODE NEXT logo oficial PRETO E BRANCO sem sombra.png" alt="">
+      <h1 class="text1">Este site ainda está em construção!</h1>
+      <p class="text2">Aproveitamos para desejar boas festas de fim de ano!</p>
+    </div>
+  </main>
+</body>
 </html>
